@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class StoryBar extends StatelessWidget {
+  const StoryBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Placeholder data for stories
@@ -13,7 +15,7 @@ class StoryBar extends StatelessWidget {
 
     return Container(
       width: double.infinity, // Edge-to-edge width
-      color: Color(0xFF4A148C), // Darker purple color
+      color: const Color(0xFF4A148C), // Darker purple color
       height: 120, // Adjust height as needed
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -26,7 +28,7 @@ class StoryBar extends StatelessWidget {
                   Stack(
                     alignment: Alignment.center,
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 35,
                         backgroundImage: AssetImage('assets/avatar_placeholder.jpg'),
                       ),
@@ -45,7 +47,7 @@ class StoryBar extends StatelessWidget {
                             child: Center(
                               child: Text(
                                 story["badge"]!,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold,
@@ -56,10 +58,10 @@ class StoryBar extends StatelessWidget {
                         ),
                     ],
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     story["name"]!,
-                    style: TextStyle(color: Colors.white, fontSize: 12),
+                    style: const TextStyle(color: Colors.white, fontSize: 12),
                   ),
                 ],
               ),

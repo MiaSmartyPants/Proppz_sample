@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import '../components/bottom_nav_bar.dart';
 
 class ProppzPage extends StatelessWidget {
+  const ProppzPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Proppz Page"),
+        title: const Text("Proppz Page"),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           "Welcome to the Proppz Page!",
           style: TextStyle(fontSize: 24),

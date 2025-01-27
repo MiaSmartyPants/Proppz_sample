@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/home_page.dart';
+import '../screens/home_grid_page.dart';
 import '../screens/search_page.dart';
 import '../screens/add_page.dart';
 import '../screens/proppz_page.dart';
@@ -10,16 +10,16 @@ class BottomNavBar extends StatelessWidget {
   final Function(int) onTap;
 
   const BottomNavBar({
-    Key? key,
+    super.key,
     required this.currentIndex,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   void _navigateTo(BuildContext context, int index) {
     switch (index) {
       case 0:
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomePage()));
+            context, MaterialPageRoute(builder: (context) => HomeGridPage()));
         break;
       case 1:
         Navigator.pushReplacement(
@@ -48,8 +48,8 @@ class BottomNavBar extends StatelessWidget {
         _navigateTo(context, index);
         onTap(index);
       },
-      selectedItemColor: Colors.purple, // Color for the selected item
-      unselectedItemColor: Colors.purple.shade300, // Color for unselected items
+      selectedItemColor: const Color(0xFF4A148C), // Color for the selected item
+      unselectedItemColor: const Color(0xFF4A148C), // Color for unselected items
       backgroundColor: Colors.white, // Background color of the navbar
       // type: BottomNavigationBarType.fixediu, 
       items: const [

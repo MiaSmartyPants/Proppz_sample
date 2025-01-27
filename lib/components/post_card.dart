@@ -10,7 +10,7 @@ class PostCard extends StatelessWidget {
   final String timeAgo;
 
   const PostCard({
-    Key? key,
+    super.key,
     required this.profileImage,
     required this.username,
     required this.postImage,
@@ -18,7 +18,7 @@ class PostCard extends StatelessWidget {
     required this.likes,
     required this.comments,
     required this.timeAgo,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -35,16 +35,16 @@ class PostCard extends StatelessWidget {
             ),
             title: Row(
               children: [
-                Text(username, style: TextStyle(fontWeight: FontWeight.bold)),
+                Text(username, style: const TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(width: 5),
                 const Icon(Icons.verified, size: 16, color: Colors.blue),
               ],
             ),
-            trailing: Row(
+            trailing: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(Icons.share, size: 20),
-                const SizedBox(width: 8),
+                SizedBox(width: 8),
                 Icon(Icons.more_vert, size: 20),
               ],
             ),
@@ -59,8 +59,8 @@ class PostCard extends StatelessWidget {
           ),
 
           // Interaction Row (arrows, custom icon)
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -78,7 +78,7 @@ class PostCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('$likes likes',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 4),
                 Text(caption),
                 const SizedBox(height: 4),
@@ -87,10 +87,10 @@ class PostCard extends StatelessWidget {
                     print("View comments tapped");
                   },
                   child: Text('View comments ($comments)',
-                      style: TextStyle(color: Colors.grey)),
+                      style: const TextStyle(color: Colors.grey)),
                 ),
                 const SizedBox(height: 4),
-                Text(timeAgo, style: TextStyle(color: Colors.grey)),
+                Text(timeAgo, style: const TextStyle(color: Colors.grey)),
               ],
             ),
           ),

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import '../components/bottom_nav_bar.dart';
 
 class SearchPage extends StatelessWidget {
+  const SearchPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Search',
           style: TextStyle(color: Colors.black),
         ),
@@ -22,7 +24,7 @@ class SearchPage extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 hintText: 'Search...',
-                prefixIcon: Icon(Icons.search, color: Colors.grey),
+                prefixIcon: const Icon(Icons.search, color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
                   borderSide: BorderSide(color: Colors.grey.shade300),
@@ -31,7 +33,7 @@ class SearchPage extends StatelessWidget {
                 fillColor: Colors.grey.shade200,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 
             // Example Content
             

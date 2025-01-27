@@ -5,7 +5,7 @@ class EngagementButtons extends StatelessWidget {
   final VoidCallback onRightArrowPressed;
   final VoidCallback onStarPressed;
 
-  const EngagementButtons({
+  const EngagementButtons({super.key, 
     required this.onLeftArrowPressed,
     required this.onRightArrowPressed,
     required this.onStarPressed,
@@ -17,15 +17,15 @@ class EngagementButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.grey),
+          icon: const Icon(Icons.arrow_back, color: Colors.grey),
           onPressed: onLeftArrowPressed,
         ),
         IconButton(
-          icon: Icon(Icons.star, color: Colors.purple), // Star icon
+          icon: const Icon(Icons.star, color: Colors.purple), // Star icon
           onPressed: onStarPressed,
         ),
         IconButton(
-          icon: Icon(Icons.arrow_forward, color: Colors.grey),
+          icon: const Icon(Icons.arrow_forward, color: Colors.grey),
           onPressed: onRightArrowPressed,
         ),
       ],
